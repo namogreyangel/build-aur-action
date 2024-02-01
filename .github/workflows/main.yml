@@ -1,0 +1,3 @@
+uses: DuckSoft/build-aur-action@master
+with:
+  repo-name: qv2ray-dev-git
