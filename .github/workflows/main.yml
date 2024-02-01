@@ -1,3 +1,15 @@
-uses: DuckSoft/build-aur-action@master
-with:
-  repo-name: qv2ray-dev-git
+name: 'Build AUR Package'
+description: 'Test build an AUR package in Docker container'
+branding:
+  icon: user-check
+  color: gray-dark
+inputs:
+  repo-name:
+    description: 'AUR repository name to build'
+    required: true
+    default: 'qv2ray-dev-git'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo-name }}
